@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "545737164083",
+    "project_id": "gekkoaplication",
+    "storage_bucket": "gekkoaplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545737164083:android:1490ea4e72b155fecaea46",
+        "android_client_info": {
+          "package_name": "com.example.geckoapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545737164083-293261j0aj0fd5a24urkmttvq2nfpaic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVW92wdiGPBB9lSvJIYqyD7fq8MTJRL7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545737164083-293261j0aj0fd5a24urkmttvq2nfpaic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
