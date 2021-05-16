@@ -61,7 +61,7 @@ class PlaceholderFragment : Fragment() {
                 if (it.isSuccessful){
                     showHome()
                 }else{
-                    showAlert()
+                    Toast.makeText(context?.applicationContext, "An error occurred authenticating the user", Toast.LENGTH_LONG).show()
                 }
             }
     }

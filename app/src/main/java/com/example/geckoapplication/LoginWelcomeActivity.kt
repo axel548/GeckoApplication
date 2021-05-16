@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.constraintlayout.utils.widget.ImageFilterButton
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 enum class ProviderType{
     BASIC
@@ -16,10 +17,13 @@ enum class ProviderType{
 
 class LoginWelcomeActivity : AppCompatActivity() {
 
+    private val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_welcome)
 
+        setTitle("Welcome")
         val email = FirebaseAuth.getInstance().currentUser?.email.toString()
         val btnLogout: ImageButton = findViewById(R.id.ivLogout)
 
@@ -29,8 +33,14 @@ class LoginWelcomeActivity : AppCompatActivity() {
 
     private fun persistent(email: String){
         val tvEmail: TextView = findViewById(R.id.tvEmail)
+        val tvName: TextView = findViewById(R.id.tvName)
+        val tvContact: TextView = findViewById(R.id.tvPhone)
 
         tvEmail.text = email
+        db.collection("users").document(email).get().addOnSuccessListener {
+            tvName.setText(it.get("Name") as String?)
+            tvContact.setText(it.get("Contact") as String?)
+        }
 
     }
 
@@ -50,5 +60,6 @@ class LoginWelcomeActivity : AppCompatActivity() {
             finish()
         }
     }
+
 
 }
