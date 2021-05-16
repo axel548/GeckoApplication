@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/psswd"
+            android:maxLength="6"
             android:inputType="textPassword"
             android:layout_below="@+id/etEmail"
             android:layout_marginBottom="20dp"

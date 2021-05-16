@@ -28,7 +28,8 @@
                 android:text="@string/contact_number"
                 style="@style/textviews"/>
 
-            <ImageView
+
+            <ImageButton
                 android:id="@+id/ivLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="54dp"

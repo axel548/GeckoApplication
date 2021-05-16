@@ -11,12 +11,17 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import com.example.geckoapplication.ui.main.SectionsPagerAdapter
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        validateUser()
 
         viewtabs()
 
@@ -28,6 +33,16 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+    }
+
+    private fun validateUser(){
+        firebaseAuth = FirebaseAuth.getInstance()
+        val user = firebaseAuth.currentUser
+        val login = Intent(this, LoginWelcomeActivity::class.java)
+        if (user != null){
+            startActivity(login)
+            finish()
+        }
     }
 
 

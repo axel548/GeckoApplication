@@ -11,54 +11,55 @@
         style="@style/relativeLayouts">
 
         <EditText
-            android:id="@+id/etName"
+            android:id="@+id/etNameSign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/name"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:layout_marginBottom="20dp"
             />
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etEmailSign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:layout_below="@+id/etName"
+            android:layout_below="@+id/etNameSign"
             android:layout_marginBottom="20dp"
             />
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPasswordSign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/psswd"
             android:inputType="textPassword"
-            android:layout_below="@+id/etEmail"
+            android:maxLength="6"
+            android:layout_below="@+id/etEmailSign"
             android:layout_marginBottom="20dp"
             />
 
         <EditText
-            android:id="@+id/etContactNumber"
+            android:id="@+id/etContactNumberSign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/contact_number"
             android:inputType="phone"
             android:maxLength="10"
-            android:layout_below="@+id/etPassword"
+            android:layout_below="@+id/etPasswordSign"
             android:layout_marginBottom="20dp"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnCreateAccountSign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/create_account"
-            android:layout_below="@id/etContactNumber"/>
+            android:layout_below="@id/etContactNumberSign"/>
 
 
 
